@@ -5,160 +5,286 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Labar</title>
-  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <title>Lab-Car</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/icons/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="main-header">
+    <!-- Navegación -->
+    <nav class="navbar navbar-default">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <a class="navbar-brand navbar-default" href="#">
-              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="col-xs-6 col-xs-offset-2 ">
-            <a href="#">
-              <img src="assets/images/logoForma.png" alt="Nature" style="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <main class="" id="content">
-      <div class="container">
-        <div class="col-xs-4">
-          <h1>Bootstrap Tutorial</h1>
-          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
-
-          <h3>Comienza a viajar con <img src="assets/images/logoForma.png" alt=""></h3>
-          <button>Descargar el app</button>
-        </div>
-      </div>
-    </main>
-    <!-- <nav class="navbar navbar-default">
-      <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-          </a>
+            <button type="button" class="pull-left navbar-toggle" data-toggle="collapse" data-target="#navbarMenu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="col-xs-offset-2 col-xs-10 navbar-brand " href="#">
+              <img class="img-responsive" alt="Logo" src="./assets/images/logoForma.png" >
+            </a>
         </div>
-      </div>
+        <div class="collapse navbar-collapse navbar-right" id="navbarMenu">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Viaja</a></li>
+            <li><a href="#">Conduce</a></li>
+            <li><a href="#ventana" data-toggle="modal">Inicia sesión</a></li>
 
-      <div class="container">
-          <div class="col-xs-12">
-              <a href="#">
-                <img src="assets/images/logoForma.png" alt="Nature" style="">
-              </a>
-          </div>
+              <!-- Modal iniciar sesión -->
+                <div class="modal fade" id="ventana">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="col-xs-offset-4 col-xs-4 col-xs-offset-4">
+                          <img class="img-responsive" src="./assets/images/user.png" alt="Photo User">
+                        </div>
+                      </div>
+                      <div class="modal-body">
+                        <div class="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+                          <form class="form-block">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                                  <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
+                                  <input type="text" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary text-uppercase">Login</button>
+                            <p>Forgot password? <a href="#">Click Here</a></p>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin modal -->
+
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <div class="demo-header">
-      <div class="col-xs-12 clas">
-        <h1>Bootstrap Tutorial</h1>
-        <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-        responsive, mobile-first projects on the web.</p>
+    <div class="container-fluid box-title" >
+      <div class="row">
+        <div class="col-xs-offset-2 col-xs-10 col-sm-offset-7 col-sm-5 bg-orange">
+          <div class="hidden-sm hidden-md hidden-lg fieldset">
+            <h1 class=" navbar-text alert-link">Comienza a viajar <br>con  <img class="logo-title" src="./assets/images/logoBlanco.png" alt="Logo Title"></h1>
+            <button type="button" class="btn btn-default navbar-btn">Descarga el app</button>
+          </div>
+          <div class="hidden-xs">
+            <h1>Disfruta del viaje <br> Eres dueño de tu tiempo</h1>
+            <p class="lead">Viaja con <img class="logo-title" src="./assets/images/logoBlanco.png" alt="Logo Title"></p>
+            <button type="button" class="btn btn-default navbar-btn text-uppercase" data-toggle="modal" data-target="#registrate">Regístrate</button>
+
+            <!-- Modal registrate -->
+            <div class="modal fade" id="registrate">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <form class="form-block">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-black" placeholder="Ya tienes una cuenta">
+                            <p class="text-uppercase">O crea una cuenta nueva</p>
+                            <input type="text" class="form-control text-inline" placeholder="Nombre">
+                            <input type="text" class="form-control text-inline" placeholder="Apellido">
+                            <input type="text" class="form-control" placeholder="Correo Electrónico: ejemplo@correo.com">
+                            <input type="text" class="form-control" placeholder="Teléfono">
+                            <input type="text" class="form-control" placeholder="Contraseña">
+                            <input type="text" class="form-control" placeholder="Ciudad">
+                            <input type="text" class="form-control" placeholder="(Opcional) Código de invitación">
+                            <button type="submit" class="btn btn-info btn-one">¿Cómo te eneteraste de nosotros? <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                            <button type="submit" class="btn btn-default btn-one text-uppercase ">Enviar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--fin modal resgistrate-->
+
+            <div class="box-line">
+              <div class="line">
+                <span>O bien</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-default navbar-btn">Conviértete en un conductor</button>
+          </div>
+        </div>
       </div>
-      <p>This is some text.</p>
-      <p>This is another text.</p>
-    </div>
-
-  <div> -->
-
-      <!-- <h1>Disfruta del Viaje Eres dueño de tu tiempo</h1> -->
-
-      <!-- <h3>Comienza a viajar con <img src="assets/images/logoForma.png" alt=""></h3>
-      <button>Descargar el app</button> -->
-      <!-- <p>Viaja con <img src="" alt=""></p> -->
-
-      <!-- <button>Registrate</button> -->
-
-      <!-- <button>Conviertete en un conductor</button> -->
     </div>
   </header>
-  <section>
-    <figure>
-      <figcaption>La nueva app</figcaption>
-      <img src="assets/images/iPhone6Plus.png" alt="">
-    </figure>
 
-    <p>LLega a tu destino aún más rápido</p>
-
-    <div class="container-fluid" id="cont-bg">
-      <!-- <h3>Descarga la nueva app</h3>
-
-      <p>La versión actualizada de LabCar está llena de nuevas funciones para llegar a donde quieres aún más fácil y rápido. </p>
-
-      <p>Con solo tocar un botón, un auto llega justo a tu ubicació. Súbete y no te preocupes: tu conductor sabe extactamente a dónde ir.</p> -->
-
-      <h3>Conduce cuando quieras</h3>
-
-      <p>LabCar es una opción flexible para alcanzar tus metas financieras.</p>
-
-      <button>Conviértete en conductor</button>
+  <!-- Primera sección -->
+  <section class="container-fluid bg-orange section-one">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <h3 class="hidden-sm hidden-md hidden-lg col-xs-offset-4">La nueva app</h3>
+          <div class="col-xs-12 col-sm-offset-1 col-sm-3">
+            <img src="./assets/images/iPhone6Plus.png" alt="">
+          </div>
+          <div class="hidden-xs col-sm-offset-2 col-sm-4">
+            <h2>Descarga la nueva app</h2>
+            <p>La versión actualizada de LabCar está llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
+            <p>Con solo tocar un bóton, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-  <section>
-    <div>
-      <h3>Conduce cuando quieras</h3>
-
-      <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
-
-      <button>Conviértete en conductor</button>
-    </div>
+    <p class="hidden-sm hidden-md hidden-lg mg-top-p">Lleva a tu destino aún más rápido</p>
   </section>
 
-  <section>
-    <div>
-      <h3>Tarifas</h3>
-      <p>Consulta tus tarifas LabCar aquí</p>
-
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-
-      <button>¡Trazar Ruta!</button>
+  <!-- Segunda sección -->
+  <section class="section-two">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-8 col-sm-4">
+          <h2 class="hidden-xs">Conduce cuando quieras</h2>
+          <h3 class="hidden-sm hidden-md hidden-lg">Conduce cuando quieras</h3>
+          <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#conviertete">Conviértete en un conductor</button>
+        </div>
+      </div>
     </div>
-    <div><img src="" alt=""></div>
   </section>
 
-  <footer>
-      <ul>
-        <li><a href="">Viaja</a></li>
-        <li><a href="">Conduce</a></li>
-        <li><a href="">Ciudades</a></li>
-        <li><a href="">Ciudades</a></li>
-        <li><a href="">Entregas</a></li>
-        <li><a href="">Cómo funciona?</a></li>
-        <li><a href="">Países</a></li>
-        <li><a href="">Seguridad</a></li>
-      </ul>
-      <!-- <ul>
-        <li><a href="">Oportunidades</a></li>
-        <li><a href="">Nuestra historia</a></li>
-        <li><a href="">API de LabCar</a></li>
-        <li><a href="">Eventos</a></li>
-        <li><a href="">Desarrolladores</a></li>
-        <li><a href="">Servicios</a></li>
-        <li><a href="">Laboratoria</a></li>
-        <li><a href="">Coders</a></li>
-      </ul>-->
+  <!-- Modal conviertete -->
+  <div class="modal fade" id="conviertete">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <form class="form-block">
+              <div class="form-group">
+                <label class="control-label" for="email">¿Tiene vehículo de 4 puertas? </label>
+                <select class="form-control">
+                  <option>si</option>
+                  <option>no</option>
+                </select>
+                <label class="control-label" for="email">Marca:</label>
+                <select class="form-control">
+                  <option>Elige la marca del vehículo</option>
+                </select>
+                <p>¿No ves tu vehículo en la lista? Envía un correo electrónico a <a href="#">sociosmdv@uber.com</a></p>
+                <label class="control-label" for="email">Modelo:</label>
+                <select class="form-control">
+                  <option>modelo1</option>
+                  <option>2</option>
+                </select>
+                <label class="control-label" for="email">Año:</label>
+                <select class="form-control">
+                  <option>2017</option>
+                  <option>2</option>
+                </select>
+                <label class="control-label" for="email">Número de la matrícula:</label>
+                <input type="text" class="form-control" placeholder="Número de matrícula">
+                <p>La información de la matrícula ayuda a los clientes a identificar los vehículos</p>
+              <button type="submit" class="btn btn-info text-uppercase">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <ul>
-        <li><i></i></li>
-        <li><i></i></li>
-        <li><i></i></li>
-        <li><i></i></li>
-        <li><i></i></li>
-      </ul>
+  <!-- Tercera sección -->
+  <section class="container-fluid bg-orange section-three">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="col-xs-12 col-sm-6">
+            <h3>Tarifas</h3>
+            <p>Consulta las tarifas LabCar aquí</p>
+            <form class="form-horizontal ">
+            <div class="form-group ">
+              <label class="control-label col-xs-1" for=""><img src="./assets/images/shape.png" alt="Icono origen"></label>
+              <div class="col-xs-10">
+                <input type="email" class="form-control " id="email" placeholder="Insurgentes Centro, Cuauhtémoc, Ciudad de México, Me" name="email">
+              </div>
+            </div>
+            <div class="form-group ">
+              <label class="control-label col-xs-1" for=""><img src="./assets/images/shape2.png"   alt="Icono destino"></label>
+              <div class="col-xs-10">
+                <input type="email" class="form-control " id="email" placeholder="Carolina, Ciudad de los Deportes, Ciudad de México, Me" name="email">
+              </div>
+            </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-default text-uppercase">Trazar Ruta !</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="image-maps">
+              <img src="./assets/images/maps.png" class="img-responsive" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>2017 LabCar technologies Inc.</p>
+<!-- Footer -->
+  <footer class="container-fluid bg-gray">
+    <div class="container">
+      <div class="row">
+        <img src="./assets/images/logoBlanco.png" alt="">
+        <hr>
+        <ul class="hidden-xs col-sm-3 list-unstyled list-inline">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></li>
+        </ul>
+        <ul class="col-xs-6 col-sm-3 list-unstyled">
+          <li><a href="#">Viaja</a></li>
+          <li><a href="#">Conduce</a></li>
+          <li><a href="#">Ciudades</a></li>
+          <li><a href="#">Ciudades</a></li>
+          <li><a href="#">Entregas</a></li>
+          <li><a href="#">Cómo funciona?</a></li>
+          <li><a href="#">Países</a></li>
+          <li><a href="#">Seguridad</a></li>
+        </ul>
+        <ul class="col-sm-3 hidden-xs list-unstyled ">
+          <li><a href="#">Viaja</a></li>
+          <li><a href="#">Conduce</a></li>
+          <li><a href="#">Ciudades</a></li>
+          <li><a href="#">Ciudades</a></li>
+          <li><a href="#">Entregas</a></li>
+          <li><a href="#">Cómo funciona?</a></li>
+          <li><a href="#">Países</a></li>
+          <li><a href="#">Seguridad</a></li>
+        </ul>
+        <ul class="col-xs-6 hidden-sm hidden-md hidden-lg col-sm-3 list-unstyled list-inline">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="col-xs-6 col-sm-3">
+          <img src="./assets/images/appstore.png" class="img-responsive appstore" alt="">
+          <img src="./assets/images/enBadgeWebGeneric.png" class="img-responsive"  alt="">
+        </div>
+        <div class="col-xs-12">
+          <hr>
+          <p>©2017 LabCar technologies Inc.</p>
+        </div>
+      </div>
+    </div>
   </footer>
+  <script src="./vendors/bootstrap/js/jquery-3.2.1.min.js"></script>
+  <script src="./vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>

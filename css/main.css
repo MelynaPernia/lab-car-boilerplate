@@ -1,13 +1,289 @@
-/* Los estilos de tu proyecto */
-
-
-#content {
-  background: url("../assets/images/taxi.jpg");
-  /* border: 1px solid blue; */
-  height: 100vh;
-
+/*----------------Seteo----------------*/
+:root {
+  --black: #000000;
+  --gray: #2B2B2B;
+  --orange: #F7B617;
+  --white: #ffffff;
 }
-#cont-bg{
-  background: url("../assets/images/conduce.jpg");
-  height: 50vh;
+
+body{
+  color: var(--white);
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+/*----------------Globales----------------*/
+
+.bg-orange {
+  background: var(--orange);
+}
+
+.bg-gray {
+  background: var(--gray);
+}
+
+.bg-black{
+  background: var(--black);
+}
+
+.btn-primary {
+  background: var(--orange);
+  border: none;
+  border-style: none;
+  color: var(--white);
+}
+
+.btn-primary:hover{
+  background: var(--white);
+  color: var(--orange);
+}
+
+.btn-defaut{
+  background: var(--white);
+  color: var(--blank);
+}
+
+ h1 , h2, h3  {
+  font-weight: bold;
+}
+
+/*----------------Header----------------*/
+
+header{
+  background: url('../assets/images/taxi.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 90%;
+  height: 150vh;
+}
+
+/*----------------Navegación----------------*/
+.navbar {
+  background: var(--white);
+  font-size: 16px;
+  padding-bottom: 45px;
+}
+
+.navbar li {
+  padding-left: 5vh;
+}
+
+.navbar li a {
+  color: var(--black)!important;
+  letter-spacing: 1px;
+}
+
+/*----------------Modal iniciar sesion----------------*/
+
+#ventana .modal-content {
+  background: #36B8AC;
+}
+
+#ventana .modal-body{
+  height: 45vh;
+}
+
+#ventana .modal-body form {
+  background: #F5F5F5;
+  border-radius: 5px;
+  padding: 3vh;
+}
+
+#ventana .modal-body p {
+  color: var(--black);
+  font-size: 14px;
+}
+
+#ventana .modal-body button {
+  margin: 2vh 0vh 2.5vh;
+}
+
+/*----------------Caja del titulo----------------*/
+.box-title{
+  margin-top: 50vh;
+}
+
+.box-title .row div{
+  padding:  2vh 3vh ;
+}
+.logo-title {
+  width: 20%;
+}
+
+.box-title p {
+  padding-top:4vh;
+}
+
+.box-title button {
+  font-size: 18px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+[type="button"] {
+  margin-bottom: 0px;
+}
+
+[alt="Logo"]{
+  width: 130px;
+}
+
+/*----------------Línea de la caja del título----------------*/
+.line {
+  display: inline-block;
+  position: relative;
+}
+
+.line::after, .line::before {
+  border-bottom: 2px solid;
+  bottom: 50%;
+  content: "";
+  margin: 0 10px;
+  position: absolute;
+  width: 100px;
+}
+
+.line::before {
+    left: -130px;
+}
+
+.line::after {
+    right: -130px;
+}
+
+.box-line {
+  margin-left: 10vw;
+}
+
+/*----------------Modal registrate----------------*/
+#registrate .modal-content , #conviertete .modal-content {
+  background: #A9A9A9;
+}
+
+#registrate {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#registrate input {
+  margin: 1vh;
+}
+
+#registrate .btn-one {
+  margin-left: 1vh;
+  margin-top: 1vh;
+  width: 66vh;
+}
+
+/*----------------Primera Sección----------------*/
+.section-one {
+  line-height: 1.5;
+  padding: 5vh 2.5vw;
+}
+
+.section-one .container {
+  border: 1px solid var(--white);
+  padding: 5vh 0;
+}
+
+.section-one p {
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+.mg-top-p {
+  margin-top: 3vh;
+}
+
+/*----------------Segunda Sección----------------*/
+.section-two {
+  background: url('../assets/images/conduce.jpg'),#000000;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  opacity: 0.9;
+}
+
+.section-two .row div {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 80vh;
+  padding-top: 10vh;
+}
+
+.section-two p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.section-two button {
+  font-size: 18px;
+}
+
+/*----------------Modal conviertete----------------*/
+#conviertete{
+  color: var(--black);
+  font-size: 16px;
+}
+
+#conviertete .modal-body{
+  padding: 5vh;
+}
+
+#conviertete label {
+  margin-top: 2.5vh;
+}
+
+#conviertete button:last-child {
+  width: 80vh;
+}
+
+/*----------------Tercera Sección----------------*/
+.section-three {
+  height: auto;
+  padding: 5vh 0;
+}
+
+.section-three button {
+  color:var(--black);
+  font-size: 14px;
+  margin-bottom: 5vh;
+}
+
+.image-maps {
+  border: 1px solid var(--white);
+  padding: 2vh;
+}
+
+/*----------------Footer---------------*/
+footer {
+  padding: 5vh 0;
+}
+
+footer li {
+  padding: 5px 0;
+}
+footer a {
+  color: var(--white);
+  font-size: 14px;
+}
+
+.appstore{
+  margin-bottom: 5vh;
+}
+
+/*----------------Media para desktop----------------*/
+@media (min-width: 768px) {
+  .navbar {
+    padding-top: 5vh;
+  }
+  [alt="Logo"] {
+    width: auto;
+  }
+.section-one .container {
+    margin-left: -5vh;
+    border-left: none;
+  }
+
+
 }
