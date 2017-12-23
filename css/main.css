@@ -136,7 +136,7 @@ header{
 
 .line::after, .line::before {
   border-bottom: 2px solid;
-  bottom: 50%;
+  bottom: 30%;
   content: "";
   margin: 0 10px;
   position: absolute;
@@ -252,7 +252,11 @@ header{
 
 .image-maps {
   border: 1px solid var(--white);
-  padding: 2vh;
+}
+
+.image-maps img {
+  padding: 10px;
+  width: 100%;
 }
 
 /*----------------Footer---------------*/
