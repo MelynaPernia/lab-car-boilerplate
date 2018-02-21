@@ -208,23 +208,23 @@
             <div class="form-group ">
               <label class="control-label col-xs-1" for=""><img src="./assets/images/shape.png" alt="Icono origen"></label>
               <div class="col-xs-10">
-                <input type="email" class="form-control " id="email" placeholder="Insurgentes Centro, Cuauhtémoc, Ciudad de México, Me" name="email">
+                <input type="email" class="form-control " id="origin" placeholder="Insurgentes Centro, Cuauhtémoc, Ciudad de México, Me" name="email">
               </div>
             </div>
             <div class="form-group ">
               <label class="control-label col-xs-1" for=""><img src="./assets/images/shape2.png"   alt="Icono destino"></label>
               <div class="col-xs-10">
-                <input type="email" class="form-control " id="email" placeholder="Carolina, Ciudad de los Deportes, Ciudad de México, Me" name="email">
+                <input type="email" class="form-control " id="destiny" placeholder="Carolina, Ciudad de los Deportes, Ciudad de México, Me" name="email">
               </div>
             </div>
               <div class="text-center">
-                <button type="button" class="btn btn-default text-uppercase">Trazar Ruta !</button>
+                <button type="button" class="btn btn-default text-uppercase" id="btn-rout">Trazar Ruta !</button>
               </div>
             </form>
           </div>
           <div class="col-xs-12 col-sm-6">
-            <div class="image-maps">
-              <img src="./assets/images/maps.PNG" class="img-responsive" alt="Image Maps">
+            <div class="image-maps" id="map">
+              <!-- <img src="./assets/images/maps.PNG" class="img-responsive" alt="Image Maps"> -->
             </div>
           </div>
         </div>
@@ -283,6 +283,8 @@
       </div>
     </div>
   </footer>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt1RTdnAKEP0cFMwJv9w-hhVl6yjG1TA8&libraries=places">
+  </script>
   <script src="./vendors/bootstrap/js/jquery-3.2.1.min.js"></script>
   <script src="./vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="./js/app.js"></script>
