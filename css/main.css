@@ -1,12 +1,14 @@
 /*----------------Seteo----------------*/
+
 :root {
   --black: #000000;
   --gray: #2B2B2B;
+  --gray-light: #dfdfdf;
   --orange: #F7B617;
   --white: #ffffff;
 }
 
-body{
+body {
   color: var(--white);
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -22,7 +24,7 @@ body{
   background: var(--gray);
 }
 
-.bg-black{
+.bg-black {
   background: var(--black);
 }
 
@@ -33,23 +35,25 @@ body{
   color: var(--white);
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background: var(--white);
   color: var(--orange);
 }
 
-.btn-defaut{
+.btn-defaut {
   background: var(--white);
   color: var(--blank);
 }
 
- h1 , h2, h3  {
+h1,
+h2,
+h3 {
   font-weight: bold;
 }
 
 /*----------------Header----------------*/
 
-header{
+header {
   background: url('../assets/images/taxi.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,6 +62,7 @@ header{
 }
 
 /*----------------Navegación----------------*/
+
 .navbar {
   background: var(--white);
   font-size: 16px;
@@ -69,7 +74,7 @@ header{
 }
 
 .navbar li a {
-  color: var(--black)!important;
+  color: var(--black) !important;
   letter-spacing: 1px;
 }
 
@@ -79,7 +84,7 @@ header{
   background: #36B8AC;
 }
 
-#ventana .modal-body{
+#ventana .modal-body {
   height: 45vh;
 }
 
@@ -99,19 +104,21 @@ header{
 }
 
 /*----------------Caja del titulo----------------*/
-.box-title{
+
+.box-title {
   margin-top: 50vh;
 }
 
-.box-title .row div{
-  padding:  2vh 3vh ;
+.box-title .row div {
+  padding: 2vh 3vh;
 }
+
 .logo-title {
   width: 20%;
 }
 
 .box-title p {
-  padding-top:4vh;
+  padding-top: 4vh;
 }
 
 .box-title button {
@@ -124,17 +131,19 @@ header{
   margin-bottom: 0px;
 }
 
-[alt="Logo"]{
+[alt="Logo"] {
   width: 130px;
 }
 
 /*----------------Línea de la caja del título----------------*/
+
 .line {
   display: inline-block;
   position: relative;
 }
 
-.line::after, .line::before {
+.line::after,
+.line::before {
   border-bottom: 2px solid;
   bottom: 30%;
   content: "";
@@ -144,11 +153,11 @@ header{
 }
 
 .line::before {
-    left: -130px;
+  left: -130px;
 }
 
 .line::after {
-    right: -130px;
+  right: -130px;
 }
 
 .box-line {
@@ -156,7 +165,9 @@ header{
 }
 
 /*----------------Modal registrate----------------*/
-#registrate .modal-content , #conviertete .modal-content {
+
+#registrate .modal-content,
+#conviertete .modal-content {
   background: #A9A9A9;
 }
 
@@ -176,6 +187,7 @@ header{
 }
 
 /*----------------Primera Sección----------------*/
+
 .section-one {
   line-height: 1.5;
   padding: 5vh 2.5vw;
@@ -196,9 +208,10 @@ header{
 }
 
 /*----------------Segunda Sección----------------*/
+
 .section-two {
-  background: url('../assets/images/conduce.jpg'),#000000;
-  background-size:cover;
+  background: url('../assets/images/conduce.jpg'), #000000;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 80vh;
@@ -221,12 +234,13 @@ header{
 }
 
 /*----------------Modal conviertete----------------*/
-#conviertete{
+
+#conviertete {
   color: var(--black);
   font-size: 16px;
 }
 
-#conviertete .modal-body{
+#conviertete .modal-body {
   padding: 5vh;
 }
 
@@ -243,13 +257,14 @@ header{
 }
 
 /*----------------Tercera Sección----------------*/
+
 .section-three {
   height: auto;
   padding: 5vh 0;
 }
 
 .section-three button {
-  color:var(--black);
+  color: var(--black);
   font-size: 14px;
   margin-bottom: 5vh;
 }
@@ -263,7 +278,18 @@ header{
   width: 100%;
 }
 
+#btn-rout {
+  background: var(--black);
+  color: var(--white);
+}
+
+#btn-rout:hover {
+  background: var(--gray-light);
+  color: var(--black);
+}
+
 /*----------------Footer---------------*/
+
 footer {
   padding: 5vh 0;
 }
@@ -271,27 +297,32 @@ footer {
 footer li {
   padding: 5px 0;
 }
+
 footer a {
   color: var(--white);
   font-size: 14px;
 }
 
-.appstore{
+footer a:hover {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.appstore {
   margin-bottom: 5vh;
 }
 
 /*----------------Media para desktop----------------*/
-@media (min-width: 768px) {
+
+@media screen and(min-width: 768px) {
   .navbar {
     padding-top: 5vh;
   }
   [alt="Logo"] {
     width: auto;
   }
-.section-one .container {
-    margin-left: -5vh;
+  .section-one .container {
     border-left: none;
+    margin-left: -5vh;    
   }
-
-
 }
